@@ -1,74 +1,380 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Apiary.Ph</title>
-
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Apiary.PH — Honey, You're the Bee-st!</title>
+	<meta name="description" content="Apiary.PH is a Philippine social enterprise helping honey lovers source pure, unadulterated honey and bee products from credible, certified bee farms.">
 
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="shortcut icon" href="assets/img/beeicon.ico" type="image/x-icon">
 
-	<!--  Custom Css -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<!-- Bootstrap CDN -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<!-- Font Awesome CDN -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	<link rel="shortcut icon" href="assets/img/beeicon.ico" type="image/x-icon" />
-
+	<meta property="og:title" content="Apiary.PH — Honey, You're the Bee-st!">
+	<meta property="og:description" content="Pure, unadulterated honey and bee products from credible Philippine bee farms.">
+	<meta property="og:image" content="assets/img/honey-bee.jpg">
 </head>
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
-
-/* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("assets/img/honey-bee.jpg");
-  min-height: 100%;
-}
-
-.w3-bar .w3-button {
-  padding: 16px;
-}
-
-#index_apiary, #index_honey_youre_the_best,#index_apiary_small{
-color:black;
-}
-
-</style>
 <body>
 
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small w3-animate-left" id="index_apiary">Apiary.PH</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium" style="color:black;" id="index_apiary_small">Apiary.PH</span><br>
-    <span class="w3-large w3-animate-right" id="index_honey_youre_the_best"><strong>Honey, You're the Bee-st!</strong></span><br>
-        <span class="w3-large w3-animate-right" id="index_honey_youre_the_best">We help honey lovers and bee product consumers <br>source out pure and unadulterated honey from credible sources.</span>
-    <p><a href="home.html" class="w3-button w3-yellow w3-active-yellow w3-padding-large w3-large w3-margin-top  w3-hover-opacity-off w3-round-xxlarge" target="_blank">LEARN MORE</a></p>
-  </div> 
+<!-- ====================== NAV ====================== -->
+<nav class="nav" id="nav">
+	<div class="container nav-inner">
+		<a class="brand" href="#home">
+			<svg class="hex" viewBox="0 0 40 40" aria-hidden="true">
+				<polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#f2b705"/>
+				<polygon points="20,8 31,14 31,26 20,32 9,26 9,14" fill="#1b1307"/>
+				<circle cx="20" cy="20" r="4.5" fill="#f2b705"/>
+			</svg>
+			Apiary.PH
+		</a>
+		<button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+			<span></span><span></span><span></span>
+		</button>
+		<ul class="nav-links" id="navLinks">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#products">Products &amp; Services</a></li>
+			<li><a href="#why-bees">Why Bees</a></li>
+			<li><a href="#farms">Bee Farms</a></li>
+			<li><a href="#team">Team</a></li>
+			<li><a href="#contact" class="nav-cta">Contact</a></li>
+		</ul>
+	</div>
+</nav>
+
+<!-- ====================== HERO ====================== -->
+<header class="hero" id="home">
+	<div class="container">
+		<span class="hero-badge">🐝 Honey, You're the Bee-st!</span>
+		<h1>Pure honey, from <em>credible</em> Philippine bee farms.</h1>
+		<p class="lede">We're a social enterprise fighting the proliferation of adulterated honey — helping honey lovers and bee-product consumers source pure, unadulterated honey from trusted, certified sources.</p>
+		<div class="hero-actions">
+			<a href="#products" class="btn btn-honey">Explore Products</a>
+			<a href="#about" class="btn btn-ghost">Our Mission</a>
+		</div>
+	</div>
+	<a class="hero-scroll" href="#stats">Scroll ↓</a>
 </header>
 
-	<script
-	src="https://code.jquery.com/jquery-3.3.1.min.js"
-	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	crossorigin="anonymous"></script>
+<!-- ====================== STATS ====================== -->
+<section class="stats" id="stats">
+	<div class="honeycomb-bg" aria-hidden="true"></div>
+	<div class="container stats-grid">
+		<div class="stat reveal"><div class="num">3.7M+</div><div class="label">Filipinos living with diabetes who deserve safe, authentic honey</div></div>
+		<div class="stat reveal"><div class="num">75%</div><div class="label">of the world's most important crops depend on animal pollination</div></div>
+		<div class="stat reveal"><div class="num">€15B</div><div class="label">estimated yearly value of insect pollination in the EU alone</div></div>
+		<div class="stat reveal"><div class="num">6</div><div class="label">partner bee farms certified for high-grade, authentic products</div></div>
+	</div>
+</section>
 
-	<!-- popper cdn for bootstrap -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<!-- ====================== ABOUT ====================== -->
+<section class="section" id="about">
+	<div class="container">
+		<div class="split">
+			<div class="reveal">
+				<span class="eyebrow">About Us</span>
+				<h2 class="section-title" style="font-size:clamp(1.9rem,3.5vw,2.7rem);margin:.6rem 0 1rem;">A social enterprise for honest honey</h2>
+				<div class="defn"><strong>a·pi·ar·y</strong> — noun. A place where bees are kept; a collection of beehives.</div>
+				<p style="color:var(--ink-soft)">We are a social enterprise aiming to address the proliferation of adulterated honey in the Philippines. We help honey lovers — especially diabetic patients and nutritionists who care about sugar levels — source pure, unadulterated honey from credible sources.</p>
+			</div>
+			<div class="photo-stack reveal">
+				<img src="assets/img/1.jpg" alt="Beekeeper working at an apiary" loading="lazy">
+			</div>
+		</div>
 
-	<!-- bootstrap js cdn -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<!-- custom js -->
-	<script type="text/javascript" src="assets/js/script.js"></script>
+		<div class="problem-grid">
+			<article class="card reveal">
+				<div class="icon">🍯</div>
+				<h3>The Problem</h3>
+				<p>Naturally farmed honey takes a long time to harvest, so some farmers unethically feed bees sugar syrup instead of natural nectar. Bees don't convert syrup into another product — what they are fed is what they produce.</p>
+			</article>
+			<article class="card reveal">
+				<div class="icon">❤️</div>
+				<h3>Effect on Health</h3>
+				<p>Over 3.7 million Filipinos are diagnosed with diabetes. Many turn to honey as a healthier sweetener — not knowing that honey from syrup-fed bees carries high sugar levels unsafe for their consumption.</p>
+			</article>
+			<article class="card reveal">
+				<div class="icon">🐝</div>
+				<h3>Effect on Bees</h3>
+				<p>Bees' health suffers when they're fed sugar syrup — threatening the world's best pollinators with decline and extinction. <a href="#why-bees">See why bees matter</a></p>
+			</article>
+		</div>
+	</div>
+</section>
+
+<!-- ====================== PRODUCTS ====================== -->
+<section class="section section-alt" id="products">
+	<div class="container">
+		<div class="section-head reveal">
+			<span class="eyebrow">Products</span>
+			<h2>Straight from the hive</h2>
+			<p>Every product comes from bee farms guaranteed as producers of authentic honey and bee products.</p>
+		</div>
+		<div class="product-grid">
+			<article class="product reveal">
+				<div class="thumb"><span class="tag">Best Seller</span><img src="assets/img/product1.jpeg" alt="Jars of pure honey" loading="lazy"></div>
+				<div class="body">
+					<h3>Honey</h3>
+					<p>A sweet, sticky material made by bees from flower nectar. High-quality honey is rich in antioxidants — swapping refined sugar for pure raw honey can bring enormous health benefits, boosting the brain and lifting fatigue.</p>
+				</div>
+			</article>
+			<article class="product reveal">
+				<div class="thumb"><img src="assets/img/product4.png" alt="Royal jelly" loading="lazy"></div>
+				<div class="body">
+					<h3>Royal Jelly</h3>
+					<p>Used for asthma, hay fever, liver disease, pancreatitis, type 2 diabetes, diabetic foot ulcers, insomnia, and fatigue secondary to cancer.</p>
+				</div>
+			</article>
+			<article class="product reveal">
+				<div class="thumb"><img src="assets/img/product2.jpeg" alt="Bee pollen granules" loading="lazy"></div>
+				<div class="body">
+					<h3>Bee Pollen</h3>
+					<p>Field-gathered flower pollen packed by worker honeybees. A complete protein rich in vitamins, minerals, enzymes, amino acids and antioxidants — an immune-system builder that enhances vitality.</p>
+				</div>
+			</article>
+			<article class="product reveal">
+				<div class="thumb"><img src="assets/img/product3.jpg" alt="Raw propolis" loading="lazy"></div>
+				<div class="body">
+					<h3>Propolis</h3>
+					<p>Propolis and its extracts help treat various conditions thanks to anti-inflammatory, antioxidant, antibacterial, and anticancer properties.</p>
+				</div>
+			</article>
+			<article class="product reveal">
+				<div class="thumb"><img src="assets/img/product5.jpg" alt="Beeswax blocks" loading="lazy"></div>
+				<div class="body">
+					<h3>Beeswax</h3>
+					<p>The wax secreted by bees to build honeycombs — used to make wood polishes, balms, and candles.</p>
+				</div>
+			</article>
+			<article class="product reveal">
+				<div class="thumb"><span class="tag">For Starters</span><img src="assets/img/product6.jpg" alt="Beekeeping starter kit" loading="lazy"></div>
+				<div class="body">
+					<h3>Beekeeping Starter Kit</h3>
+					<p>The essential equipment and instructions for taking up beekeeping for the very first time.</p>
+				</div>
+			</article>
+		</div>
+
+		<div class="section-head reveal" style="margin-top:4.5rem">
+			<span class="eyebrow">Services</span>
+			<h2>Beyond the jar</h2>
+		</div>
+		<div class="service-grid" style="margin-top:0">
+			<article class="service reveal">
+				<img src="assets/img/teach.jpeg" alt="Beekeeping education session" loading="lazy">
+				<div class="body"><h3>Education</h3><p>Workshops and training on ethical beekeeping and honey literacy.</p></div>
+			</article>
+			<article class="service reveal">
+				<img src="assets/img/test.jpeg" alt="Honey quality testing in a lab" loading="lazy">
+				<div class="body"><h3>Testing &amp; Monitoring</h3><p>Quality verification so authentic local honey can prove what's in the jar.</p></div>
+			</article>
+			<article class="service reveal">
+				<img src="assets/img/commerce.jpg" alt="E-commerce for bee products" loading="lazy">
+				<div class="body"><h3>E-Commerce</h3><p>A trusted channel connecting certified farms directly to consumers.</p></div>
+			</article>
+		</div>
+	</div>
+</section>
+
+<!-- ====================== WHY BEES ====================== -->
+<section class="section why" id="why-bees">
+	<div class="honeycomb-bg" aria-hidden="true"></div>
+	<div class="container">
+		<div class="section-head reveal">
+			<span class="eyebrow">Why Bees Matter</span>
+			<h2>The importance of bees in our ecosystem</h2>
+			<p>Pollination is one of 17 recognized ecosystem services. Over 75% of the world's most important crops — and 35% of food produced — depend on animal pollination.</p>
+		</div>
+		<div class="fact-grid">
+			<article class="fact reveal">
+				<div class="icon">🍎</div>
+				<h3>Our food depends on them</h3>
+				<p>Apples, pears, cucumbers, cherries, melons, cranberries, asparagus and broccoli all rely on bees to fertilize their flowers. Blueberries and cherries are 90% dependent on honey bee pollination — almonds depend on it entirely.</p>
+			</article>
+			<article class="fact reveal">
+				<div class="icon">🌳</div>
+				<h3>Ecosystems are built on them</h3>
+				<p>As pollinators, bees support the growth of trees, flowers, and plants that feed and shelter creatures large and small — interconnected ecosystems that let diverse species co-exist.</p>
+			</article>
+			<article class="fact reveal">
+				<div class="icon">☕</div>
+				<h3>Coffee &amp; biofuel too</h3>
+				<p>Coffee is pollinated by bees. So is canola — a key ingredient in next-generation biofuels. The decline of bees would ripple through industries far beyond the dinner table.</p>
+			</article>
+			<article class="fact reveal">
+				<div class="icon">🐄</div>
+				<h3>Even livestock feels it</h3>
+				<p>Oilseeds — grown only from bee-pollinated plants — are cattle's main protein source. Without bees, meat production goes downhill along with fruits and vegetables.</p>
+			</article>
+		</div>
+	</div>
+</section>
+
+<!-- ====================== BEE FARMS ====================== -->
+<section class="section" id="farms">
+	<div class="container">
+		<div class="section-head reveal">
+			<span class="eyebrow">Partner Bee Farms</span>
+			<h2>Certified sources you can trust</h2>
+			<p>Our partner bee farms are certified to provide only high-grade, authentic bee products.</p>
+		</div>
+		<div class="farm-grid">
+			<article class="farm reveal">
+				<div class="farm-top"><h3>Bohol Bee Farm</h3><span class="dist">23 mi</span></div>
+				<a href="https://www.google.com/maps/search/Bohol+Bee+Farm" target="_blank" rel="noopener">View on map →</a>
+			</article>
+			<article class="farm reveal">
+				<div class="farm-top"><h3>Ilog Maria Honeybee Farm</h3><span class="dist">26 mi</span></div>
+				<a href="https://www.google.com/maps/search/Ilog+Maria+Honeybee+Farm" target="_blank" rel="noopener">View on map →</a>
+			</article>
+			<article class="farm reveal">
+				<div class="farm-top"><h3>Los Pepes Bee Farm</h3><span class="dist">26 mi</span></div>
+				<a href="https://www.google.com/maps/search/Los+Pepes+Bee+Farm" target="_blank" rel="noopener">View on map →</a>
+			</article>
+			<article class="farm reveal">
+				<div class="farm-top"><h3>Honey House Honey Bee Farm</h3><span class="dist">40 mi</span></div>
+				<a href="https://www.google.com/maps/search/Honey+House+Honey+Bee+Farm" target="_blank" rel="noopener">View on map →</a>
+			</article>
+			<article class="farm reveal">
+				<div class="farm-top"><h3>Mt. Banahaw Bee Farm</h3><span class="dist">45 mi</span></div>
+				<a href="https://www.google.com/maps/search/Mt+Banahaw+Bee+Farm" target="_blank" rel="noopener">View on map →</a>
+			</article>
+			<article class="farm reveal">
+				<div class="farm-top"><h3>Milea Bee Farm</h3><span class="dist">46 mi</span></div>
+				<a href="https://www.google.com/maps/search/Milea+Bee+Farm" target="_blank" rel="noopener">View on map →</a>
+			</article>
+		</div>
+		<p class="farm-note reveal">Distances measured from Metro Manila.</p>
+	</div>
+</section>
+
+<!-- ====================== TEAM ====================== -->
+<section class="section section-alt" id="team">
+	<div class="container">
+		<div class="section-head reveal">
+			<span class="eyebrow">The Team</span>
+			<h2>Background of founders</h2>
+		</div>
+		<div class="founder-grid">
+			<article class="founder reveal">
+				<img src="assets/img/herald.jpg" alt="Herald Bebis" loading="lazy">
+				<h3>Herald Bebis</h3>
+				<p>Beekeeper &amp; Community Organizer · Lead Generation Strategist · Facebook Ads Specialist · Chatbot &amp; Funnel Builder</p>
+			</article>
+			<article class="founder reveal">
+				<img src="assets/img/leslie.jpg" alt="Leslie de Velez" loading="lazy">
+				<h3>Leslie de Velez</h3>
+				<p>Supply Chain &amp; Operations Director</p>
+			</article>
+			<article class="founder reveal">
+				<img src="assets/img/rhey.jpg" alt="Rhey Joseph Daway" loading="lazy">
+				<h3>Rhey Joseph Daway, RCE</h3>
+				<p>MBA, Asian Institute of Management (AIM) · Business Area Engineer · Licensed Civil Engineer</p>
+			</article>
+			<article class="founder reveal">
+				<img src="assets/img/asher.jpg" alt="Asher Beriño" loading="lazy">
+				<h3>Asher Beriño</h3>
+				<p>MBA, Asian Institute of Management (AIM) · Lead Engineer</p>
+			</article>
+			<article class="founder reveal">
+				<img src="assets/img/christian.jpg" alt="Christian Jon Rillera" loading="lazy">
+				<h3>Christian Jon Rillera</h3>
+				<p>Founder &amp; CEO, Development N Analytics IT Solutions, Inc. · Founder, GasMe · Founder, Virtual Augmented Reality Technologies</p>
+			</article>
+			<article class="founder reveal">
+				<img src="assets/img/miller.jpg" alt="Miller T. Perez" loading="lazy">
+				<h3>Miller T. Perez</h3>
+				<p>Software Developer · Certified Cloudera Data Analyst</p>
+			</article>
+		</div>
+	</div>
+</section>
+
+<!-- ====================== CONTACT ====================== -->
+<section class="section" id="contact">
+	<div class="container">
+		<div class="section-head reveal">
+			<span class="eyebrow">Contact</span>
+			<h2>Get in touch</h2>
+			<p>Fill out the form to send us a message and we'll get back to you as soon as possible.</p>
+		</div>
+		<div class="contact-wrap">
+			<div class="contact-card reveal">
+				<div class="honeycomb-bg" aria-hidden="true"></div>
+				<h3>Talk to us</h3>
+				<p>Questions about our honey, partner farms, or beekeeping? We'd love to hear from you.</p>
+				<div class="contact-line">
+					<div class="ico">📞</div>
+					<div><div class="lbl">Phone</div><a href="tel:+639055174371">+63 905 517 4371</a></div>
+				</div>
+				<div class="contact-line">
+					<div class="ico">✉️</div>
+					<div><div class="lbl">Email</div><a href="mailto:heraldbebis@gmail.com">heraldbebis@gmail.com</a></div>
+				</div>
+				<div class="contact-line">
+					<div class="ico">📍</div>
+					<div><div class="lbl">Location</div><span style="font-weight:600">Philippines</span></div>
+				</div>
+			</div>
+			<form class="contact-form reveal" id="contactForm">
+				<div class="form-row">
+					<div class="field">
+						<label for="cf-name">Your Name</label>
+						<input type="text" id="cf-name" name="name" required autocomplete="name">
+					</div>
+					<div class="field">
+						<label for="cf-email">Your Email</label>
+						<input type="email" id="cf-email" name="email" required autocomplete="email">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="field">
+						<label for="cf-phone">Phone</label>
+						<input type="tel" id="cf-phone" name="phone" autocomplete="tel">
+					</div>
+					<div class="field">
+						<label for="cf-address">Address</label>
+						<input type="text" id="cf-address" name="address" autocomplete="street-address">
+					</div>
+				</div>
+				<div class="field">
+					<label for="cf-note">Message</label>
+					<textarea id="cf-note" name="note" placeholder="Type your message here…" required></textarea>
+				</div>
+				<button type="submit" class="btn btn-dark">Send Message 🐝</button>
+				<p class="form-hint">Sending opens your email app with the message pre-filled.</p>
+			</form>
+		</div>
+	</div>
+</section>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="footer">
+	<div class="honeycomb-bg" aria-hidden="true"></div>
+	<div class="container">
+		<div class="footer-inner">
+			<a class="brand" href="#home">
+				<svg class="hex" viewBox="0 0 40 40" aria-hidden="true">
+					<polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="#f2b705"/>
+					<polygon points="20,8 31,14 31,26 20,32 9,26 9,14" fill="#1b1307"/>
+					<circle cx="20" cy="20" r="4.5" fill="#f2b705"/>
+				</svg>
+				Apiary.PH
+			</a>
+			<ul class="footer-links">
+				<li><a href="#about">About</a></li>
+				<li><a href="#products">Products</a></li>
+				<li><a href="#why-bees">Why Bees</a></li>
+				<li><a href="#farms">Bee Farms</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">© 2019–2026 Apiary.PH — Honey, You're the Bee-st! 🐝</div>
+	</div>
+</footer>
+
+<script src="assets/js/script.js"></script>
 </body>
 </html>
