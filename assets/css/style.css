@@ -22,7 +22,8 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* .smooth is added by JS after load so the initial hash jump stays instant */
+html.smooth { scroll-behavior: smooth; }
 
 section[id], header[id] { scroll-margin-top: 68px; }
 

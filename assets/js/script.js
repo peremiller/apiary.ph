@@ -1,5 +1,10 @@
 // Apiary.PH — interactions
 
+// Enable smooth in-page scrolling only after the initial hash jump has landed
+window.addEventListener('load', () => {
+	setTimeout(() => document.documentElement.classList.add('smooth'), 100);
+});
+
 // Nav shadow on scroll
 const nav = document.getElementById('nav');
 const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
