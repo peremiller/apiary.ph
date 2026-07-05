@@ -36,6 +36,16 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
+// Safety net: if the observer never fired at all (hidden tab, odd browser),
+// force-reveal everything; otherwise leave the scroll animation intact.
+window.addEventListener('load', () => {
+	setTimeout(() => {
+		if (!document.querySelector('.reveal.visible')) {
+			document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+		}
+	}, 2500);
+});
+
 // Active nav link while scrolling
 const sections = [...document.querySelectorAll('section[id], header[id]')];
 const navAnchors = [...links.querySelectorAll('a[href^="#"]')];
