@@ -132,6 +132,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+.nav-links a:focus-visible, .nav-toggle:focus-visible, .brand:focus-visible, .btn:focus-visible, .contact-form :is(input, textarea):focus-visible { outline: 3px solid var(--amber-deep); outline-offset: 3px; }
+
 /* ---------- hero ---------- */
 .hero {
   position: relative;
@@ -565,12 +567,13 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
 }
 
 /* ---------- reveal animations ---------- */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal { opacity: 1; transform: none; transition: opacity .7s ease, transform .7s ease; }
+.motion-ready .reveal { opacity: 0; transform: translateY(24px); }
 .reveal.visible { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .reveal, .motion-ready .reveal { opacity: 1; transform: none; transition: none; }
   * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
 
