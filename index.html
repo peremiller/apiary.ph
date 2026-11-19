@@ -298,7 +298,7 @@
 		<div class="section-head reveal">
 			<span class="eyebrow">Contact</span>
 			<h2>Get in touch</h2>
-			<p>Fill out the form to send us a message and we'll get back to you as soon as possible.</p>
+			<p>Complete the form to prepare an email in your email app. Nothing is sent until you review and send the draft there.</p>
 		</div>
 		<div class="contact-wrap">
 			<div class="contact-card reveal">
@@ -318,7 +318,7 @@
 					<div><div class="lbl">Location</div><span style="font-weight:600">Philippines</span></div>
 				</div>
 			</div>
-			<form class="contact-form reveal" id="contactForm">
+			<form class="contact-form reveal" id="contactForm" aria-describedby="contact-email-hint">
 				<div class="form-row">
 					<div class="field">
 						<label for="cf-name">Your Name</label>
@@ -343,8 +343,8 @@
 					<label for="cf-note">Message</label>
 					<textarea id="cf-note" name="note" placeholder="Type your message here…" required></textarea>
 				</div>
-				<button type="submit" class="btn btn-dark">Send Message 🐝</button>
-				<p class="form-hint">Sending opens your email app with the message pre-filled.</p>
+				<button type="submit" class="btn btn-dark">Open Email Draft 🐝</button>
+				<p class="form-hint" id="contact-email-hint">Opens a pre-filled draft in your email app. Review and press Send in your email app to deliver it.</p>
 			</form>
 		</div>
 	</div>
