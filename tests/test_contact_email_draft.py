@@ -1,0 +1,40 @@
+"""Regression checks for Apiary.PH's client-side email draft contact form."""
+import re
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class ContactEmailDraftTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.html = (ROOT / "index.html").read_text(encoding="utf-8")
+        cls.js = (ROOT / "assets/js/script.js").read_text(encoding="utf-8")
+
+    def test_form_explains_that_messages_are_not_automatically_sent(self):
+        self.assertIn("Nothing is sent until you review and send the draft there.", self.html)
+        self.assertIn('Open Email Draft 🐝</button>', self.html)
+        self.assertNotIn("we'll get back to you as soon as possible", self.html)
+
+    def test_hint_is_connected_to_form_for_assistive_technology(self):
+        self.assertRegex(self.html, r'<form[^>]+id="contactForm"[^>]+aria-describedby="contact-email-hint"')
+        self.assertRegex(self.html, r'<p[^>]+id="contact-email-hint"[^>]*>[^<]*press Send in your email app')
+
+    def test_existing_input_fields_remain_named_and_labeled(self):
+        for field_id, field_name in (("cf-name", "name"), ("cf-email", "email"),
+                                     ("cf-phone", "phone"), ("cf-address", "address"),
+                                     ("cf-note", "note")):
+            with self.subTest(field=field_name):
+                self.assertIn(f'for="{field_id}"', self.html)
+                self.assertRegex(self.html, fr'id="{field_id}"[^>]*name="{field_name}"')
+
+    def test_handler_remains_client_side_mailto_with_no_form_submission(self):
+        self.assertIn("e.preventDefault()", self.js)
+        self.assertIn("window.location.href = 'mailto:heraldbebis@gmail.com?subject='", self.js)
+        self.assertNotIn("fetch(", self.js)
+        self.assertIn("encodeURIComponent(", self.js)
+
+
+if __name__ == "__main__":
+    unittest.main()
