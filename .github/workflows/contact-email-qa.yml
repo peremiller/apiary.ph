@@ -1,0 +1,31 @@
+name: Contact email draft QA
+
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "assets/js/script.js"
+      - "tests/test_contact_email_draft.py"
+      - ".github/workflows/contact-email-qa.yml"
+  push:
+    branches: [master]
+    paths:
+      - "index.html"
+      - "assets/js/script.js"
+      - "tests/test_contact_email_draft.py"
+      - ".github/workflows/contact-email-qa.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  contact-copy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify contact disclosure and retained fields
+        run: python -m unittest discover -s tests -p 'test_contact_email_draft.py' -v

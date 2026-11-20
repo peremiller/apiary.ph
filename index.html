@@ -62,7 +62,7 @@
 <section class="stats" id="stats">
 	<div class="honeycomb-bg" aria-hidden="true"></div>
 	<div class="container stats-grid">
-		<div class="stat reveal"><div class="num">3.7M+</div><div class="label">Filipinos living with diabetes who deserve safe, authentic honey</div></div>
+		<div class="stat reveal"><div class="num">3.7M+</div><div class="label">Filipinos living with diabetes; honey still contains sugars</div></div>
 		<div class="stat reveal"><div class="num">75%</div><div class="label">of the world's most important crops depend on animal pollination</div></div>
 		<div class="stat reveal"><div class="num">€15B</div><div class="label">estimated yearly value of insect pollination in the EU alone</div></div>
 		<div class="stat reveal"><div class="num">6</div><div class="label">partner bee farms certified for high-grade, authentic products</div></div>
@@ -77,7 +77,7 @@
 				<span class="eyebrow">About Us</span>
 				<h2 class="section-title" style="font-size:clamp(1.9rem,3.5vw,2.7rem);margin:.6rem 0 1rem;">A social enterprise for honest honey</h2>
 				<div class="defn"><strong>a·pi·ar·y</strong> — noun. A place where bees are kept; a collection of beehives.</div>
-				<p style="color:var(--ink-soft)">We are a social enterprise aiming to address the proliferation of adulterated honey in the Philippines. We help honey lovers — especially diabetic patients and nutritionists who care about sugar levels — source pure, unadulterated honey from credible sources.</p>
+				<p style="color:var(--ink-soft)">We are a social enterprise aiming to address the proliferation of adulterated honey in the Philippines. We help honey lovers and nutrition professionals source authentic honey and clear product information, including sugar content, from credible sources.</p>
 			</div>
 			<div class="photo-stack reveal">
 				<img src="assets/img/1.jpg" alt="Beekeeper working at an apiary" width="852" height="480" loading="lazy">
@@ -93,7 +93,7 @@
 			<article class="card reveal">
 				<div class="icon">❤️</div>
 				<h3>Effect on Health</h3>
-				<p>Over 3.7 million Filipinos are diagnosed with diabetes. Many turn to honey as a healthier sweetener — not knowing that honey from syrup-fed bees carries high sugar levels unsafe for their consumption.</p>
+				<p>Honey, whether pure or adulterated, contains sugars and can affect blood glucose. Authenticity matters for product quality, but does not make honey sugar-free or a treatment for diabetes.</p>
 			</article>
 			<article class="card reveal">
 				<div class="icon">🐝</div>
@@ -117,28 +117,28 @@
 				<div class="thumb"><span class="tag">Best Seller</span><img src="assets/img/product1.jpeg" alt="Jars of pure honey" loading="lazy"></div>
 				<div class="body">
 					<h3>Honey</h3>
-					<p>A sweet, sticky material made by bees from flower nectar. High-quality honey is rich in antioxidants — swapping refined sugar for pure raw honey can bring enormous health benefits, boosting the brain and lifting fatigue.</p>
+					<p>A sweet, sticky material made by bees from flower nectar. Honey contains naturally occurring sugars and small amounts of other compounds. It is not a sugar-free substitute or a treatment for any medical condition.</p>
 				</div>
 			</article>
 			<article class="product reveal">
 				<div class="thumb"><img src="assets/img/product4.png" alt="Royal jelly" loading="lazy"></div>
 				<div class="body">
 					<h3>Royal Jelly</h3>
-					<p>Used for asthma, hay fever, liver disease, pancreatitis, type 2 diabetes, diabetic foot ulcers, insomnia, and fatigue secondary to cancer.</p>
+					<p>Royal jelly is a bee-produced substance. Evidence for treating human diseases is limited, and it may trigger allergic reactions, especially in people sensitive to bee products.</p>
 				</div>
 			</article>
 			<article class="product reveal">
 				<div class="thumb"><img src="assets/img/product2.jpeg" alt="Bee pollen granules" loading="lazy"></div>
 				<div class="body">
 					<h3>Bee Pollen</h3>
-					<p>Field-gathered flower pollen packed by worker honeybees. A complete protein rich in vitamins, minerals, enzymes, amino acids and antioxidants — an immune-system builder that enhances vitality.</p>
+					<p>Flower pollen collected by bees and gathered from hives. Bee pollen can cause allergic reactions and should not be presented as a proven treatment for health conditions.</p>
 				</div>
 			</article>
 			<article class="product reveal">
 				<div class="thumb"><img src="assets/img/product3.jpg" alt="Raw propolis" loading="lazy"></div>
 				<div class="body">
 					<h3>Propolis</h3>
-					<p>Propolis and its extracts help treat various conditions thanks to anti-inflammatory, antioxidant, antibacterial, and anticancer properties.</p>
+					<p>A resinous material bees use in hives. Research into its properties is ongoing; propolis is not a substitute for established medical treatment.</p>
 				</div>
 			</article>
 			<article class="product reveal">
@@ -298,7 +298,7 @@
 		<div class="section-head reveal">
 			<span class="eyebrow">Contact</span>
 			<h2>Get in touch</h2>
-			<p>Fill out the form to send us a message and we'll get back to you as soon as possible.</p>
+			<p>Complete the form to prepare an email in your email app. Nothing is sent until you review and send the draft there.</p>
 		</div>
 		<div class="contact-wrap">
 			<div class="contact-card reveal">
@@ -318,7 +318,7 @@
 					<div><div class="lbl">Location</div><span style="font-weight:600">Philippines</span></div>
 				</div>
 			</div>
-			<form class="contact-form reveal" id="contactForm">
+			<form class="contact-form reveal" id="contactForm" aria-describedby="contact-email-hint">
 				<div class="form-row">
 					<div class="field">
 						<label for="cf-name">Your Name</label>
@@ -343,8 +343,8 @@
 					<label for="cf-note">Message</label>
 					<textarea id="cf-note" name="note" placeholder="Type your message here…" required></textarea>
 				</div>
-				<button type="submit" class="btn btn-dark">Send Message 🐝</button>
-				<p class="form-hint">Sending opens your email app with the message pre-filled.</p>
+				<button type="submit" class="btn btn-dark">Open Email Draft 🐝</button>
+				<p class="form-hint" id="contact-email-hint">Opens a pre-filled draft in your email app. Review and press Send in your email app to deliver it.</p>
 			</form>
 		</div>
 	</div>
