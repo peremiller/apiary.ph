@@ -35,6 +35,17 @@ class ContactEmailDraftTests(unittest.TestCase):
         self.assertNotIn("fetch(", self.js)
         self.assertIn("encodeURIComponent(", self.js)
 
+    def test_product_descriptions_avoid_unsupported_disease_treatment_claims(self):
+        self.assertIn("Honey, whether pure or adulterated, contains sugars", self.html)
+        self.assertIn("does not make honey sugar-free or a treatment for diabetes.", self.html)
+        self.assertIn("Evidence for treating human diseases is limited", self.html)
+        self.assertIn("may trigger allergic reactions", self.html)
+        self.assertIn("propolis is not a substitute for established medical treatment.", self.html)
+        self.assertNotIn("swapping refined sugar for pure raw honey can bring enormous health benefits", self.html)
+        self.assertNotIn("Used for asthma, hay fever, liver disease", self.html)
+        self.assertNotIn("Propolis and its extracts help treat various conditions", self.html)
+
+
 
 if __name__ == "__main__":
     unittest.main()
