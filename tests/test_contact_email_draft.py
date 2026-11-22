@@ -31,9 +31,19 @@ class ContactEmailDraftTests(unittest.TestCase):
 
     def test_handler_remains_client_side_mailto_with_no_form_submission(self):
         self.assertIn("e.preventDefault()", self.js)
-        self.assertIn("window.location.href = 'mailto:heraldbebis@gmail.com?subject='", self.js)
+        self.assertIn("const draftUrl = 'mailto:heraldbebis@gmail.com?subject='", self.js)
+        self.assertIn("window.location.href = draftUrl;", self.js)
         self.assertNotIn("fetch(", self.js)
         self.assertIn("encodeURIComponent(", self.js)
+
+    def test_oversized_draft_cannot_silently_truncate_user_message(self):
+        self.assertIn('id="contact-draft-status" role="status" aria-live="polite" hidden', self.html)
+        self.assertIn("if (draftUrl.length > 1800)", self.js)
+        self.assertIn("status.hidden = false;", self.js)
+        self.assertIn("f.elements.namedItem('note').focus();", self.js)
+        self.assertIn("Your form entries are preserved.", self.js)
+        self.assertNotIn("f.reset()", self.js)
+
 
     def test_product_descriptions_avoid_unsupported_disease_treatment_claims(self):
         self.assertIn("Honey, whether pure or adulterated, contains sugars", self.html)
