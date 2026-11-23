@@ -57,5 +57,10 @@ class ContactEmailDraftTests(unittest.TestCase):
 
 
 
+    def test_reduced_motion_overrides_post_load_smooth_scrolling(self):
+        css = (ROOT / "assets/css/style.css").read_text(encoding="utf-8")
+        self.assertRegex(css, r"@media \(prefers-reduced-motion: reduce\)\s*\{\s*html, html\.smooth\s*\{\s*scroll-behavior: auto;")
+
+
 if __name__ == "__main__":
     unittest.main()
