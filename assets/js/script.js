@@ -91,5 +91,16 @@ document.getElementById('contactForm').addEventListener('submit', (e) => {
 		(f.elements.namedItem('phone').value ? '\nPhone: ' + f.elements.namedItem('phone').value : '') +
 		(f.elements.namedItem('address').value ? '\nAddress: ' + f.elements.namedItem('address').value : '')
 	);
-	window.location.href = 'mailto:heraldbebis@gmail.com?subject=' + subject + '&body=' + body;
+	const draftUrl = 'mailto:heraldbebis@gmail.com?subject=' + subject + '&body=' + body;
+	const status = document.getElementById('contact-draft-status');
+	// Long mailto URLs may be truncated by an email app; retain the visitor's original fields.
+	if (draftUrl.length > 1800) {
+		status.hidden = false;
+		status.textContent = 'Your message is too long for a reliable email draft link. Copy your message into your email app manually. Your form entries are preserved.';
+		f.elements.namedItem('note').focus();
+		return;
+	}
+	status.textContent = '';
+	status.hidden = true;
+	window.location.href = draftUrl;
 });
