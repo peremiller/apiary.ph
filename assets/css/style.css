@@ -572,7 +572,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
 .reveal.visible { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html, html.smooth { scroll-behavior: auto; }
   .reveal, .motion-ready .reveal { opacity: 1; transform: none; transition: none; }
   * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
